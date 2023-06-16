@@ -1,0 +1,656 @@
+/*need to intionlize stuff correctly before I can add it to the project */
+
+@font-face {
+  font-family: Bergen-Mono-Regular;
+  src: url("Assests/BergenMono-Webfont/BergenMono-Regular.woff");
+}
+
+.hide{
+  display: none;
+}
+
+
+a,abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, var, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    font-family: Bergen-Mono-Regular;
+    color: #5a5858; 
+    scroll-behavior: smooth;
+}
+
+  article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+  }
+  
+  body {
+    line-height: 1;
+  }
+  
+  html {
+    font-size: 100%;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+  }
+
+  ol, ul {
+    list-style-type: none;
+    margin: 0;
+  }
+  
+  .mainwrapper{
+    background-color: #dcdcdc;
+    width: calc(100% - 6rem);
+    margin-left: 7rem;
+    overflow: hidden;
+  }
+
+  .sectionHeader span {
+  padding-bottom: 1rem;
+  display: block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  position: relative;
+  padding-left: 5rem;
+  letter-spacing: 1px;
+  }
+
+  .sectionHeader span::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.25rem;
+    width: 4rem;
+    height: 1px;
+    background: #333;
+  }
+
+  .skillsgrid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+    grid-column-gap: 1rem;
+    grid-row-gap: 1rem;
+    margin: 1rem 0rem 0rem 0rem;
+    border-radius: 50px;
+    padding: 2rem 2rem 0rem 2rem;
+    box-shadow: 6px 6px 20px #bebebe, -6px -6px 31px #ffffff;
+    background: #dcdcdc;
+  }
+  
+
+  .skillsgrid li{
+    height: 5rem;
+    font-size:2.5rem;
+  }
+
+
+  .skillist{
+    width: 100%;
+    padding: 1rem 3rem 0rem 1.5rem;
+    margin: 2rem 0rem 7rem 0rem;
+    height: 11rem;
+    text-align: center;
+  }
+
+ .sectionHeader h2{
+    font-size: 2rem;
+  }
+
+ .filterbtn{
+  text-align: center;
+  border-radius: 50px;
+  background: #dcdcdcdc;
+  box-shadow: 6px 7px 0px #bebebe, -7px -6px 42px #ffffff;
+  padding: 0.5rem;
+  cursor: pointer;
+  }
+
+  .filterbtn:hover{
+    background: linear-gradient(to left, #f27300 50%, #f5a45b 50%) right;
+    background-size: 200%;
+    transition: .5s ease-out;
+  }
+
+  .skillsgrid img{
+    filter:grayscale();
+  }
+
+
+  .innerwrapper{
+    background-color: #dcdcdc;
+    padding: 6rem 2rem;
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+
+  .menu-hover {
+    position:fixed;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height:100vh; 
+    width:7rem;
+    background-color:#dcdcdc;
+  }
+
+  .menu-hover p{
+    text-align: center;
+    padding: 0rem 18rem 0rem 0rem;
+  }
+
+  .logo{
+      width: 6rem;
+  }
+
+
+  .nav-item{
+    text-decoration: none;
+    border-radius: 50px;
+    background: #dcdcdc;
+    box-shadow:  8px 8px 16px #bbbbbb,
+             -8px -8px 16px #fdfdfd;
+  }
+
+  .nav-item:hover{
+    background: linear-gradient(to left, #f27300 50%, #f5a45b 50%) right;
+    background-size: 200%;
+    transition: .5s ease-out;
+  }
+
+.wrapper-hover nav {
+  padding: 1rem; 
+}
+
+.wrapper-hover nav a{
+    margin: 0rem 0rem 1rem 0rem;
+    padding: 0.5rem 0rem 0rem 0rem;
+    display: inline-block;
+    width: 100%;
+    position: relative;
+}
+
+.wrapper-hover ul{
+  padding: 0rem 1rem 0rem 0rem ; 
+}
+
+.wrapperHeader {
+  margin-top: 4rem;
+}
+
+.innerwrapper header{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  padding: 0rem 3rem 0rem 0rem;
+  margin: 0rem 0rem 7rem 0rem;
+  border-radius: 50px;
+  background: #dcdcdc;
+  box-shadow: 6px 6px 30px #bebebe, -18px -13px 46px #ffffff;
+  height: 30rem;
+}
+
+.heroImage {
+  position: relative;
+  flex: 0 0 34%;
+  padding: 0 1rem;
+}
+
+.heroImage img{
+    width: 22rem;
+}
+
+.wrapper-hover i{
+  font-size: 1.5rem;
+  padding: 0rem 0rem 0.5rem 1rem;
+}
+
+
+
+
+.description{
+  margin: 2rem 0rem 0rem 0rem;
+  font-size: 1rem;
+  letter-spacing: 1.2px;
+}
+
+
+
+.socials{
+  margin: 2rem 0rem 0rem 0rem
+}
+
+
+.heroDescription h1 span{
+  color:#f27300;
+}
+
+
+/* Typewriter Code referenced from : https://css-tricks.com/snippets/css/typewriter-effect/ */
+
+.typewriter h1 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid #f27300; /* The typwriter cursor */
+  width:24rem; /* Gives that scrolling effect as the typing happens */
+ 
+
+  margin: 2rem 0rem 0rem 0rem;
+  font-size: 1.5rem;
+
+  white-space: nowrap;
+  animation: 
+    typing 6.5s steps(20,end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 20rem }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #f27300; }
+}
+
+/*----------------------------------------------*/
+
+.socials{
+  display: flex;
+  align-items: center;
+}
+
+.resume-outer {
+  background-color: transparent;
+  border-radius: 32px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: .5s;
+  font-weight: 400;
+  font-size: 17px;
+  border: 1px solid;
+  font-family: inherit;
+  text-transform: uppercase;
+  color: #000000 ;
+  z-index: 1;
+  width: 8rem;
+  height: 2rem;
+ }
+ 
+ .resume-outer::before, .resume-outer::after {
+  content: '';
+  display: block;
+  width: 8rem;
+  height: 2rem;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  background-color: #f27300;
+  transition: 1s ease;
+ }
+ 
+ .resume-outer::before {
+  top: -1em;
+  left: -1em;
+ }
+ 
+ .resume-outer::after {
+  left: calc(100% + 1em);
+  top: calc(100% + 1em);
+ }
+ 
+ .resume-outer:hover::before, .resume-outer:hover::after {
+  height: 410px;
+  width: 410px;
+ }
+ 
+ .resume-outer:hover {
+  color: #5a5858;
+ }
+ 
+ .resume-outer:active {
+  filter: brightness(.8);
+ }
+ 
+.socials .wrapper{
+  position: relative;
+  border-radius: 50%;
+  margin: 0rem 0rem 0rem 6rem;
+}
+
+.wrapper .button{
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.socials .wrapper .icon{
+  position: relative;
+  background: #dcdcdc;
+  border-radius: 50%;
+  margin: 10px;
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .upbox{
+  position: absolute;
+  top: 0;
+  font-size: 1rem;
+  color: #fff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.upbox::before{
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .upbox {
+  top: -3rem;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .upbox {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .linkedIn:hover,
+.wrapper .linkedIn:hover .upbox,
+.wrapper .linkedIn:hover .upbox::before {
+  background: #1DA1F2;
+  color: #fff;
+}
+
+.wrapper .github:hover,
+.wrapper .github:hover .upbox,
+.wrapper .github:hover .upbox::before {
+  background: #802a8f;
+  color: #fff;
+}
+
+.wrapper .twitter:hover,
+.wrapper .twitter:hover .upbox,
+.wrapper .twitter:hover .upbox::before {
+  background: #1da1f2;
+  color: #fff;
+}
+
+.wrapper .twitter:hover,
+.wrapper .twitter:hover .upbox,
+.wrapper .twitter:hover .upbox::before {
+  background: #1da1f2;
+  color: #fff;
+}
+
+.wrapper .dev_to:hover,
+.wrapper .dev_to:hover .upbox,
+.wrapper .dev_to:hover .upbox::before {
+  background: #080808;
+  color: #fff;
+}
+
+footer{
+    font-size: 1rem;
+    text-align: center;
+}
+
+
+
+.projectList .filtermenu {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+    grid-column-gap: 1rem;
+    grid-row-gap: 1rem;
+    margin: 2rem 0rem 0rem 9rem;
+
+}
+
+
+.projectGrid{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
+  margin: 4rem 0rem 4rem 0rem;
+}
+
+.projectGrid li{
+  border-radius: 50px;
+  background: #dcdcdc;
+  box-shadow: 6px 7px 0px #bebebe, -7px -6px 42px #ffffff;
+  padding: 1rem;
+  text-align: center;
+}
+
+
+
+
+.ContactForm{
+    display: grid;
+    grid-template-columns: repeat(2, 0fr);
+    row-gap: 20px;
+    -webkit-column-gap: 25px;
+    column-gap: 25px;
+    margin-bottom: 35px;
+}
+
+
+.contentFormWrapper{
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+
+.contentFormWrapper input{
+  border-style: dashed;
+  background-color: #dcdcdc;
+  height: 2rem;
+  width: 24rem;
+}
+
+.contentFormWrapper textarea{
+  border-style: dashed;
+  background-color: #dcdcdc;
+}
+
+.contentFormWrapper .messageInput {
+  grid-column:1/3;
+  height: 10rem;
+}
+
+.contentFormWrapper .subjectInput{
+  grid-column:1/3;
+  width:50rem;
+}
+
+.sendForm{
+  letter-spacing: 1px;
+  border-radius: 40px;
+  width: 8rem;
+  height: 2rem;
+}
+
+.srOnly{
+  position:absolute;
+}
+
+
+
+@media only screen and (max-width: 600px){
+
+  .menu-hover{
+    display: none;
+  }
+
+  .mainwrapper{
+    margin-left: 0rem;
+    width:100%;
+  }
+
+  .wrapperHeader{
+    margin: 0rem;
+  }
+
+  .wrapperHeader header{
+    flex-direction: column;
+    background: none;
+    box-shadow: none;
+    padding-bottom: 22rem;
+  }
+
+  .heroImage img {
+    width:15rem;
+  }
+
+  .innerwrapper{
+    padding: 1rem;
+  }
+
+  .heroDescription{
+    text-align: center;
+    flex-direction: column;
+    display: flex;
+    margin: 1rem;
+  }
+
+  .description{
+    line-height: 1.5;
+    font-size: 0.75rem;
+    padding:1rem;
+  }
+
+
+  .socials{
+    flex-direction: column;
+  }
+
+  .socials .wrapper{
+    margin : 0rem;
+  }
+
+
+
+  .typewriter h1{
+    animation:none;
+    font-size: 1.25rem;
+    width: auto;
+  }
+
+  .sectionHeader span{
+    margin-top:12rem;
+  }
+
+
+  .skillsgrid{
+    grid-template-columns: repeat(auto-fill, minmax(3rem, 1fr));
+    border-radius: 0rem;
+    padding: 2rem;
+    box-shadow: none;
+    background:none;
+  }
+
+  .skillist{
+    padding: 0rem;
+    margin: 0rem;
+  }
+
+  .projectGrid{
+    padding: 0rem;
+  }
+
+  .ContactForm{
+    margin-left: 15px;
+    width:auto;
+  }
+
+  .contentFormWrapper .subjectInput{
+    width: auto;
+    grid-column: 1;
+  }
+
+  .contentFormWrapper input{
+    width:12rem;
+    grid-column: 1;
+  }
+
+  .projectList .filtermenu{
+    grid-template-columns: repeat(auto-fill, minmax(8rem, 2fr));
+    grid-row-gap: 2rem;
+    margin: 2rem 0rem 0rem 0rem;
+  }
+
+
+}
+
+.loaderWrapper{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #dcdcdc;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 10;
+}
+
+
+.loader {
+  margin-top:1rem;
+  display: block;
+  --height-of-loader: 4px;
+  --loader-color: #0071e2;
+  width: 130px;
+  height: var(--height-of-loader);
+  border-radius: 30px;
+  position: absolute;
+}
+
+.loader::before {
+  content: "";
+  position: absolute;
+  background: var(--loader-color);
+  width: 0%;
+  height: 100%;
+  border-radius: 30px;
+  animation: moving 1s ease-in-out infinite;
+  ;
+}
+
+@keyframes moving {
+  50% {
+    width: 100%;
+  }
+
+  100% {
+    width: 0;
+    right: 0;
+    left: unset;
+  }
+}
